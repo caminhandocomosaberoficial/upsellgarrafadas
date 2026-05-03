@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OFERTA ESPECIAL</title>
+
+<style>
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background:#061a0d;
+    color:#fff;
+    text-align:center;
+}
+.top{
+    background:#ff0000;
+    padding:12px;
+    font-weight:bold;
+    animation:pulse 1s infinite;
+}
+@keyframes pulse{
+    0%{opacity:1;}
+    50%{opacity:0.6;}
+    100%{opacity:1;}
+}
+.container{
+    padding:20px;
+}
+h1{
+    color:#ffd700;
+    font-size:26px;
+}
+h2{
+    font-size:20px;
+}
+img{
+    width:100%;
+    max-width:420px;
+    margin:20px auto;
+    display:block;
+    border-radius:10px;
+}
+.highlight{
+    color:#00ff88;
+    font-weight:bold;
+}
+.box{
+    background:#0f2e17;
+    padding:15px;
+    margin:20px 0;
+    border-radius:10px;
+}
+.btn{
+    background:#ff0000;
+    color:#fff;
+    padding:18px;
+    font-size:20px;
+    font-weight:bold;
+    border-radius:10px;
+    text-decoration:none;
+    display:block;
+    width:90%;
+    max-width:380px;
+    margin:20px auto;
+    box-shadow:0 0 20px red;
+    animation:glow 1.5s infinite;
+}
+@keyframes glow{
+    0%{box-shadow:0 0 10px red;}
+    50%{box-shadow:0 0 25px red;}
+    100%{box-shadow:0 0 10px red;}
+}
+.timer{
+    font-size:20px;
+    color:#ffd700;
+    margin-top:10px;
+}
+.fake-proof{
+    margin-top:15px;
+    font-size:14px;
+    color:#ccc;
+}
+.small{
+    font-size:13px;
+    opacity:0.8;
+}
+</style>
+</head>
+
+<body>
+
+<div class="top">
+⚠️ ESPERE! SUA COMPRA AINDA NÃO ESTÁ COMPLETA...
+</div>
+
+<div class="container">
+
+<h1>🔥 LIBERE AGORA O MAIOR ACERVO DE REMÉDIOS NATURAIS</h1>
+
+<h2>São <span class="highlight">600 RECEITAS</span> que podem transformar sua saúde e da sua família</h2>
+
+<img src="capa.png">
+
+<div class="box">
+<p><b>Você já começou… mas está deixando o mais poderoso de fora.</b></p>
+<p>Esse material contém soluções que poucas pessoas têm acesso.</p>
+</div>
+
+<div class="box">
+<p>✔ Receitas para dezenas de doenças</p>
+<p>✔ Métodos naturais comprovados</p>
+<p>✔ Ingredientes simples e acessíveis</p>
+<p>✔ Alternativas reais para parar de depender de farmácia</p>
+</div>
+
+<div class="box">
+<h2>🚨 A VERDADE:</h2>
+<p>Quem não tem esse conhecimento...</p>
+<p class="highlight">continua gastando dinheiro e não resolve o problema de verdade.</p>
+</div>
+
+<div class="box">
+<h2>💡 DECIDA AGORA:</h2>
+<p>❌ Sair e continuar como está</p>
+<p>OU</p>
+<p class="highlight">✅ Garantir o guia mais completo já criado</p>
+</div>
+
+<a href="https://ggcheckout.app/checkout/v2/87kXSY6dEVBJhu4NJb8t" class="btn">
+👉 SIM! QUERO ACESSO IMEDIATO AGORA
+</a>
+
+<div class="timer" id="countdown">
+⏳ Oferta expira em: 05:00
+</div>
+
+<div class="fake-proof">
+🔥 Mais de 3.742 pessoas já garantiram hoje
+</div>
+
+<p class="small">
+Pagamento único • Acesso imediato • Conteúdo digital
+</p>
+
+</div>
+
+<script>
+// contador regressivo
+let time = 300;
+let el = document.getElementById("countdown");
+
+setInterval(()=>{
+let min = Math.floor(time/60);
+let sec = time % 60;
+el.innerHTML = "⏳ Oferta expira em: " + min + ":" + (sec<10?"0"+sec:sec);
+time--;
+if(time <= 0) time = 300;
+},1000);
+</script>
+
+</body>
+</html>
