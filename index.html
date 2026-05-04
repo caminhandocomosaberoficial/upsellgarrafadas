@@ -5,6 +5,35 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>OFERTA ESPECIAL</title>
 
+<!-- 🔥 META PIXEL AVANÇADO -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+
+fbq('init', '1591539398723711');
+
+// eventos principais
+fbq('track', 'PageView');
+
+fbq('track', 'ViewContent', {
+  content_name: 'Upsell 600 Receitas Naturais',
+  value: 19.90,
+  currency: 'BRL'
+});
+</script>
+
+<noscript>
+<img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1591539398723711&ev=PageView&noscript=1"/>
+</noscript>
+<!-- 🔥 FIM PIXEL -->
+
 <style>
 body{
     margin:0;
@@ -127,7 +156,8 @@ img{
 <p class="highlight">✅ Garantir o guia mais completo já criado</p>
 </div>
 
-<a href="https://ggcheckout.app/checkout/v2/87kXSY6dEVBJhu4NJb8t" class="btn">
+<!-- 🔥 BOTÃO COM EVENTO + UTM -->
+<a href="#" class="btn" id="buyBtn">
 👉 SIM! QUERO ACESSO IMEDIATO AGORA
 </a>
 
@@ -146,7 +176,7 @@ Pagamento único • Acesso imediato • Conteúdo digital
 </div>
 
 <script>
-// contador regressivo
+// ⏳ CONTADOR
 let time = 300;
 let el = document.getElementById("countdown");
 
@@ -157,6 +187,22 @@ el.innerHTML = "⏳ Oferta expira em: " + min + ":" + (sec<10?"0"+sec:sec);
 time--;
 if(time <= 0) time = 300;
 },1000);
+
+// 🔥 CAPTURA UTM
+const params = window.location.search;
+
+// 🔥 BOTÃO COM EVENTO + REDIRECT
+document.getElementById("buyBtn").addEventListener("click", function(){
+
+  fbq('track', 'InitiateCheckout', {
+    value: 19.90,
+    currency: 'BRL'
+  });
+
+  setTimeout(()=>{
+    window.location.href = "https://ggcheckout.app/checkout/v2/87kXSY6dEVBJhu4NJb8t" + params;
+  }, 300);
+});
 </script>
 
 </body>
